@@ -1,0 +1,49 @@
+@mixin margin($value...) {
+  margin: $value;
+}
+
+@mixin marginTop($value) {
+  margin-top: $value;
+}
+
+@mixin marginBottom($value) {
+  margin-bottom: $value;
+}
+
+@mixin marginLeft($value) {
+  margin-left: $value;
+}
+
+@mixin marginRight($value) {
+  margin-right: $value;
+}
+
+@mixin padding($value...) {
+  padding: $value;
+}
+
+@mixin paddingTop($value) {
+  padding-top: $value;
+}
+
+@mixin paddingBottom($value) {
+  padding-bottom: $value;
+}
+
+@mixin paddingLeft($value) {
+  padding-left: $value;
+}
+
+@mixin paddingRight($value) {
+  padding-right: $value;
+}
+
+@mixin transition($property, $duration, $timingFun: "") {
+  @if $timingFun== "" {
+    -webkit-transition: $property $duration;
+    transition: $property $duration;
+  } @else {
+    -webkit-transition: $property $duration $timingFun;
+    transition: $property $duration $timingFun;
+  }
+}

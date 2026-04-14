@@ -1,0 +1,47 @@
+.page-header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: calc(100% - 320px);
+  padding: 30px 0 30px 30px;
+  backdrop-filter: blur(10px);
+
+  .back-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color-40);
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background-color: var(--primary-color-40);
+    }
+  }
+  &.with-back {
+    justify-content: start;
+  }
+  &.with-count {
+    padding: 15px 20px;
+  }
+  > h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--primary-color);
+    .records-count {
+      color: var(--grey-color);
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .add-btn {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+}

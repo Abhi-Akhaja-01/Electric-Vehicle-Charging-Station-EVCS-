@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5377727f.css",
+    "main.js": "/static/js/main.0eaba64f.js",
+    "static/js/453.b32bfb4d.chunk.js": "/static/js/453.b32bfb4d.chunk.js",
+    "static/media/evs-logo.svg": "/static/media/evs-logo.c2d47eb0144cba754d26.svg",
+    "index.html": "/index.html",
+    "main.5377727f.css.map": "/static/css/main.5377727f.css.map",
+    "main.0eaba64f.js.map": "/static/js/main.0eaba64f.js.map",
+    "453.b32bfb4d.chunk.js.map": "/static/js/453.b32bfb4d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5377727f.css",
+    "static/js/main.0eaba64f.js"
+  ]
+}

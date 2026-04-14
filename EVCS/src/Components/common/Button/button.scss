@@ -1,0 +1,32 @@
+.button {
+  height: 40px;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0px 20px 0px var(--primary-color-90);
+  border: 1px solid var(--primary-color);
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.outline {
+    height: 38px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color-20);
+  }
+
+  &.danger {
+    background-color: var(--text-red-color);
+    box-shadow: 0 0 3px 0 var(--text-red-color);
+    border-color: var(--text-red-color);
+  }
+}

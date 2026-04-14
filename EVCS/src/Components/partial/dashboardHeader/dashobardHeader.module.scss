@@ -1,0 +1,205 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: calc(100% - 320px);
+  top: 20px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  > h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    gap: 20px;
+
+    > div {
+      margin-top: 7px;
+      position: relative;
+      .notification {
+        font-size: 25px;
+        color: var(--placeholder-color);
+        cursor: pointer;
+        transition: color 0.2s ease;
+        margin-top: 4px;
+      }
+      .notiCount {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: -2px;
+        height: 15px;
+        width: 15px;
+        font-size: 9px;
+        border-radius: 50%;
+        background-color: var(--text-red-color);
+        color: white;
+      }
+      .dropdown-menu {
+        position: absolute;
+        background-color: var(--white);
+        box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.18);
+        border-radius: 15px;
+        padding: 5px;
+        width: 280px;
+        top: 40px;
+        right: -11px;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8) translateZ(0px);
+        transform-origin: top right;
+        transition: all 0.15s linear;
+        z-index: 30;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 12px;
+          width: 12px;
+          right: 18px;
+          top: -3px;
+          background-color: white;
+          transform: rotate(45deg);
+        }
+
+        > p {
+          font-size: 12px;
+          color: var(--placeholder-color);
+          letter-spacing: 1px;
+          margin: 10px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          max-height: 350px;
+          overflow-y: auto;
+          border-radius: 0 0 10px 10px;
+          &::-webkit-scrollbar {
+            width: 3px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background-color: var(--light-grey-color);
+          }
+          li {
+            position: relative;
+            cursor: pointer;
+            padding: 8px 10px;
+            margin-right: 5px;
+            border-radius: 10px;
+
+            &:hover,
+            &.unseen {
+              background-color: var(--primary-bg-color);
+            }
+            &.unseen {
+              &::before {
+                content: "";
+                position: absolute;
+                height: 6px;
+                width: 6px;
+                border-radius: 50%;
+                right: 5px;
+                top: 5px;
+                background-color: #1b254ba9;
+              }
+            }
+            h4 {
+              font-size: 15px;
+              font-weight: 500;
+              color: var(--primary-color);
+            }
+
+            span {
+              font-size: 12px;
+              color: var(--placeholder-color);
+              font-weight: 300;
+              letter-spacing: 1px;
+            }
+
+            > div {
+              display: flex;
+              justify-content: space-between;
+              margin: 10px 0 0;
+
+              span {
+                font-size: 11px;
+                font-weight: 200;
+                letter-spacing: 1px;
+              }
+            }
+          }
+        }
+        &.user {
+          right: 0px;
+          top: 45px;
+          width: 230px;
+          padding: 0 0 20px 0;
+          border-radius: 20px;
+
+          > p {
+            font-size: 13px;
+            color: var(--placeholder-color);
+            font-weight: 600;
+            letter-spacing: 0;
+            padding: 20px 20px 10px;
+            margin: 0;
+            border-bottom: 1px solid var(--light-grey-color);
+          }
+          > li {
+            font-size: 14px;
+            color: var(--placeholder-color);
+            font-weight: 400;
+            padding: 20px 20px 0px 25px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            &:last-child {
+              color: var(--text-red-color);
+              font-size: 13px;
+            }
+            svg {
+              font-size: 20px;
+              margin-right: 5px;
+            }
+          }
+          &::before {
+            content: none;
+          }
+        }
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transform: none;
+        }
+      }
+    }
+    .avatar {
+      margin: 0;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: var(--white);
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
