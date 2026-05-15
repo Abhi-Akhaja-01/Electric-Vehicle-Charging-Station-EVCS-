@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
+  Platform,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   Text,
   View,
@@ -155,6 +157,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 15,
     flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight + 10 : 15,
   },
   rowWrapper: {
     flexDirection: "row",

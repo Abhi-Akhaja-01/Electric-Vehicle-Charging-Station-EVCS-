@@ -29,7 +29,8 @@
       },
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyAC1COeJ1NiQ6NTsV3D4j159X1ePNK00zk"
+          "apiKey": "AIzaSyDypHDBT8_KbFXX7y2tlYvbTz_Kl6lEwDE",
+          "backupApiKey": "AIzaSyAC1COeJ1NiQ6NTsV3D4j159X1ePNK00zk"
         }
       },
       "permissions": [
